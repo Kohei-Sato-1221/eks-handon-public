@@ -57,3 +57,15 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller \
     --set vpcId={Your VPCID} \
     --set serviceAccount.name=aws-load-balancer-controller \
     -n kube-system
+
+
+
+
+## DynamoDBアクセスのためのサービスアカウント作成
+eksctl create iamserviceaccount \
+    --name dynamodb-access \
+    --namespace backend \
+    --cluster ekslesson \
+    --attach-policy-arn arn:aws:iam::295058252080:policy/DynamoDBForEKSAppPolicy \
+    --override-existing-serviceaccounts \
+    --approve
