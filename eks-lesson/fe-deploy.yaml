@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: {REPLACE_ME}
+        image: {ECR_REPOSITORY_URI_FRONTEND}:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
