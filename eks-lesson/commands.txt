@@ -1,0 +1,14 @@
+## DynamoDB PariQL Editorで実行するクエリ
+INSERT INTO "BEER" value {'ID' : '0001','NAME' : 'Lager'}
+INSERT INTO "BEER" value {'ID' : '0002','NAME' : 'Ale'}
+INSERT INTO "BEER" value {'ID' : '0003','NAME' : 'Pilsner'}
+
+※1文ずつ実行してください！
+
+
+## EKSクラスター作成
+eksctl create cluster \
+  --name=ekslesson \
+  --version 1.22 \
+  --nodes=3 \
+  --managed
