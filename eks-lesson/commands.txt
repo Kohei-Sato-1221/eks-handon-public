@@ -6,6 +6,11 @@ INSERT INTO "BEER" value {'ID' : '0003','NAME' : 'Pilsner'}
 ※1文ずつ実行してください！
 
 
+
+
+
+
+
 ## EKSクラスター作成
 eksctl create cluster \
   --name=ekslesson \
